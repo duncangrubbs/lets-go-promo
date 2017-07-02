@@ -3,6 +3,7 @@
 Copyright (c) 2016 Duncan Grubbs. All rights reserved.
 -->
 
+<!-- App Elements -->
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html">
 <link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
@@ -12,10 +13,18 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
 <link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html">
 <link rel="import" href="../bower_components/app-route/app-location.html">
 <link rel="import" href="../bower_components/app-route/app-route.html">
+
+<!-- Iron Elements -->
 <link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="../bower_components/iron-selector/iron-selector.html">
-<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
+<link rel="import" href="../bower_components/iron-icons/social-icons.html">
+<link rel="import" href="../bower_components/iron-icons/communication-icons.html">
+
+<!-- Paper Elements -->
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
 
 <link rel="import" href="shared-styles.html">
 
@@ -31,34 +40,29 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         display: block;
       }
 
-      app-drawer-layout:not([narrow]) [drawer-toggle] {
-        display: none;
-      }
-
-      app-header {
+      /******************
+        DESKTOP STYLES
+      *******************/
+      #nav {
         color: #fff;
         background-color: var(--app-primary-color);
       }
 
       app-header paper-icon-button {
-        --paper-icon-button-ink-color: white;
+        --paper-icon-button-ink-color: #FFF;
       }
 
-      .drawer-list {
-        margin: 0 20px;
+      /******************
+        MOBILE STYLES
+      *******************/
+      paper-tabs {
+        margin: 0;
+        width: 100vw;
+        background: var(--app-primary-color);
+        color: #FFF;
       }
-
-      .drawer-list a {
-        display: block;
-        padding: 0 16px;
-        text-decoration: none;
-        color: var(--app-secondary-color);
-        line-height: 40px;
-      }
-
-      .drawer-list a.iron-selected {
-        color: black;
-        font-weight: bold;
+      paper-tab {
+        width: 33%;
       }
     </style>
 
@@ -69,37 +73,27 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         data="{{routeData}}"
         tail="{{subroute}}"></app-route>
 
-    <app-drawer-layout fullbleed>
-      <app-drawer id="drawer" slot="drawer">
-        <app-toolbar>Menu</app-toolbar>
-        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
-          <a name="home" href="home">View One</a>
-          <a name="chats" href="chats">View Two</a>
-          <a name="profile" href="profile">View Three</a>
-        </iron-selector>
-      </app-drawer>
+    <app-toolbar id="nav">
+      <paper-icon-button icon="icons:menu" drawer-toggle></paper-icon-button>
+      <div main-title>Let's Go</div>
+    </app-toolbar>
 
-      <app-header-layout has-scrolling-region>
+    <paper-tabs selected="0">
+      <paper-tab name="home"><iron-icon icon="icons:home"></iron-icon></paper-tab>
+      <paper-tab name="chats"><iron-icon icon="communication:chat"></iron-icon></paper-tab>
+      <paper-tab name="profile"><iron-icon icon="social:person"></iron-icon></paper-tab>
+    </paper-tabs>
 
-        <app-header slot="header" condenses reveals effects="waterfall">
-          <app-toolbar>
-            <paper-icon-button icon="icons:menu" drawer-toggle></paper-icon-button>
-            <div main-title>My App</div>
-          </app-toolbar>
-        </app-header>
-
-        <iron-pages
-            selected="[[page]]"
-            attr-for-selected="name"
-            fallback-selection="view404"
-            role="main">
-          <home-view name="home"></home-view>
-          <chats-view name="chats"></chats-view>
-          <profile-view name="profile"></profile-view>
-          <my404-view name="view404"></my404-view>
-        </iron-pages>
-      </app-header-layout>
-    </app-drawer-layout>
+    <iron-pages
+        selected="[[page]]"
+        attr-for-selected="name"
+        fallback-selection="view404"
+        role="main">
+      <home-view name="home"></home-view>
+      <chats-view name="chats"></chats-view>
+      <profile-view name="profile"></profile-view>
+      <my404-view name="view404"></my404-view>
+    </iron-pages>
   </template>
 
   <script>
@@ -142,13 +136,8 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         }
 
         // If no page was found in the route data, page will be an empty string.
-        // Deault to 'view1' in that case.
+        // Default to 'home' in that case.
         this.page = page || 'home';
-
-        // Close a non-persistent drawer when the page & route are changed.
-        if (!this.$.drawer.persistent) {
-          this.$.drawer.close();
-        }
       }
 
       _pageChanged(page) {
