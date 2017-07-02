@@ -17,6 +17,8 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
 <link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
 <link rel="import" href="../bower_components/iron-icons/iron-icons.html">
 
+<link rel="import" href="shared-styles.html">
+
 <link rel="lazy-import" href="home-view.html">
 <link rel="lazy-import" href="chats-view.html">
 <link rel="lazy-import" href="profile-view.html">
@@ -24,11 +26,8 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
 
 <dom-module id="my-app">
   <template>
-    <style>
+    <style include="shared-styles">
       :host {
-        --app-primary-color: #4285f4;
-        --app-secondary-color: black;
-
         display: block;
       }
 
