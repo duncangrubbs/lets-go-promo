@@ -5,7 +5,7 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
 
 <link rel="import" href="../bower_components/polymer/polymer-element.html">
 
-<dom-module id="my404-view">
+<dom-module id="view404-view">
   <template>
     <style>
       :host {
@@ -19,8 +19,8 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
   </template>
 
   <script>
-    class My404View extends Polymer.Element {
-      static get is() { return 'my404-view'; }
+    class View404View extends Polymer.Element {
+      static get is() { return 'view404-view'; }
       static get properties() {
         return {
           // This shouldn't be neccessary, but the Analyzer isn't picking up
@@ -30,6 +30,6 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
       }
     }
 
-    window.customElements.define(My404View.is, My404View);
+    window.customElements.define(View404View.is, View404View);
   </script>
 </dom-module>

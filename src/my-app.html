@@ -28,10 +28,11 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
 
 <link rel="import" href="shared-styles.html">
 
+<!-- Views -->
 <link rel="lazy-import" href="home-view.html">
 <link rel="lazy-import" href="chats-view.html">
 <link rel="lazy-import" href="profile-view.html">
-<link rel="lazy-import" href="my404-view.html">
+<link rel="lazy-import" href="view404-view.html">
 
 <dom-module id="my-app">
   <template>
@@ -46,6 +47,16 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
       #nav {
         color: #fff;
         background-color: var(--app-primary-color);
+      }
+
+      .drawer-list {
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+      }
+
+      a.iron-selected {
+        font-weight: bold;
       }
 
       app-header paper-icon-button {
@@ -73,6 +84,18 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         data="{{routeData}}"
         tail="{{subroute}}"></app-route>
 
+    <app-drawer-layout fullbleed force-narrow>
+      <app-drawer id="drawer" slot="drawer">
+        <app-toolbar>Let's Go</app-toolbar>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+          <a name="home" href="home">Home</a>
+          <a name="chats" href="chats">Chats</a>
+          <a name="notifications" href="notifications">Notifications</a>
+          <a name="profile" href="profile">Profile</a>
+          <a name="signout" href="signout">Sign Out</a>
+        </iron-selector>
+      </app-drawer>
+
     <app-toolbar id="nav">
       <paper-icon-button icon="icons:menu" drawer-toggle></paper-icon-button>
       <div main-title>Let's Go</div>
@@ -92,8 +115,11 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
       <home-view name="home"></home-view>
       <chats-view name="chats"></chats-view>
       <profile-view name="profile"></profile-view>
-      <my404-view name="view404"></my404-view>
+      <view404-view name="view404"></view404-view>
     </iron-pages>
+
+    </app-drawer-layout>
+
   </template>
 
   <script>
@@ -138,6 +164,8 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         // If no page was found in the route data, page will be an empty string.
         // Default to 'home' in that case.
         this.page = page || 'home';
+
+        this.$.drawer.toggle();
       }
 
       _pageChanged(page) {
