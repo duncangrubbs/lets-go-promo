@@ -56,6 +56,7 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
 
       a.iron-selected {
         font-weight: bold;
+        background: #eee;
       }
 
       app-toolbar {
@@ -81,17 +82,56 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         width: 33%;
       }
 
+      .upper-sidenav {
+        display: flex;
+        flex-direction: column;
+        background-image: url('../images/activities/Hiking.jpg');
+        background-position: center center;
+        background-size: cover;
+        color: #fff;
+        height: 13vh;
+        padding: 8px;
+      }
+
+      .prof-and-name {
+        display: flex;
+        align-items: center;
+      }
+
+      #name-sidenav, #email-sidenav {
+        padding: 0;
+        margin: 0;
+      }
+
+      #name-sidenav {
+        font-size: 1.5em;
+        margin: 0 8px;
+      }
+
+      .profile-img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+
       .sidenav-item {
         display: flex;
         min-height: 30px;
         width: 100%;
         margin: 0;
         background: #fff;
-        border-bottom: 1px solid grey;
+      }
+
+      .sidenav-item.selected {
+        background: #EEE;
       }
 
       .sidenav-link {
         padding: 8px 16px;
+      }
+
+      .sidenav-link-text {
+        margin: 0 16px;
       }
     </style>
 
@@ -104,36 +144,43 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
 
     <app-drawer-layout fullbleed force-narrow>
       <app-drawer id="drawer" slot="drawer">
-        <app-toolbar>Let's Go</app-toolbar>
+        <!--<app-toolbar>Let's Go</app-toolbar>-->
+        <div class="upper-sidenav">
+          <div class="prof-and-name">
+          <img src="../images/taylor.jpg" alt="Prof" class="profile-img">
+          <span id="name-sidenav">Duncan Grubbs</span>
+          </div>
+          <span id="email-sidenav">tenaciousblues@gmail.com</span>
+        </div>
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a class="sidenav-item" name="home" href="home">
             <div class="sidenav-link">
               <iron-icon icon="icons:home"></iron-icon>
-              Home
+              <span class="sidenav-link-text">Home</span>
             </div>
           </a>
           <a class="sidenav-item" name="chats" href="chats">
             <div class="sidenav-link">
               <iron-icon icon="communication:chat"></iron-icon>
-              Chats
+              <span class="sidenav-link-text">Chats</span>
             </div>
           </a>
           <a class="sidenav-item" name="notifications" href="notifications">
             <div class="sidenav-link">
               <iron-icon icon="social:notifications"></iron-icon>
-              Notifications
+              <span class="sidenav-link-text">Notifications</span>
             </div>
           </a>
           <a class="sidenav-item" name="profile" href="profile">
             <div class="sidenav-link">
               <iron-icon icon="social:person"></iron-icon>
-              Profile
+              <span class="sidenav-link-text">Profile</span>
             </div>
           </a>
           <a class="sidenav-item" name="signout" href="signout">
             <div class="sidenav-link">
               <iron-icon icon="icons:arrow-back"></iron-icon>
-              Sign Out
+              <span class="sidenav-link-text">Sign Out</span>
             </div>
           </a>
         </iron-selector>
