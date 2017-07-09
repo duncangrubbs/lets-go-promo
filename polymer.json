@@ -5,7 +5,7 @@
     "src/lets-go.html",
     "src/chat-view.html",
     "src/profile-view.html",
-    "src/404-view.html"
+    "src/view404-view.html"
   ],
   "sources": [
     "src/**/*",

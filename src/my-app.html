@@ -114,6 +114,12 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         border-radius: 50%;
       }
 
+      .profile-img-tab {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+      }
+
       .sidenav-item {
         display: flex;
         min-height: 30px;
@@ -135,6 +141,7 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
       }
     </style>
 
+    <!-- Routing for app -->
     <app-location route="{{route}}"></app-location>
     <app-route
         route="{{route}}"
@@ -142,9 +149,10 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         data="{{routeData}}"
         tail="{{subroute}}"></app-route>
 
+    <!-- Layout for main MOBILE content -->
     <app-drawer-layout fullbleed force-narrow>
       <app-drawer id="drawer" slot="drawer">
-        <!--<app-toolbar>Let's Go</app-toolbar>-->
+        <!-- Banner for top of sidenav -->
         <div class="upper-sidenav">
           <div class="prof-and-name">
           <img src="../images/taylor.jpg" alt="Prof" class="profile-img">
@@ -152,6 +160,7 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
           </div>
           <span id="email-sidenav">tenaciousblues@gmail.com</span>
         </div>
+        <!-- Navigation in side nav -->
         <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
           <a class="sidenav-item" name="home" href="home">
             <div class="sidenav-link">
@@ -186,17 +195,20 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         </iron-selector>
       </app-drawer>
 
+    <!-- Toolbar for mobile content -->
     <app-toolbar id="nav">
       <paper-icon-button icon="icons:menu" drawer-toggle></paper-icon-button>
       <div main-title>Let's Go</div>
     </app-toolbar>
 
+    <!-- Top tabs for basic navigation -->
     <paper-tabs selected="0">
       <paper-tab name="home"><iron-icon icon="icons:home"></iron-icon></paper-tab>
       <paper-tab name="chats"><iron-icon icon="communication:chat"></iron-icon></paper-tab>
-      <paper-tab name="profile"><iron-icon icon="social:person"></iron-icon></paper-tab>
+      <paper-tab name="profile"><img src="../images/taylor.jpg" alt="Prof" class="profile-img-tab"></paper-tab>
     </paper-tabs>
 
+    <!-- Routing, actual views go here -->
     <iron-pages
         selected="[[page]]"
         attr-for-selected="name"
@@ -255,6 +267,7 @@ Copyright (c) 2016 Duncan Grubbs. All rights reserved.
         // Default to 'home' in that case.
         this.page = page || 'home';
 
+        // Toggle drawer when the route is changed.
         this.$.drawer.toggle();
       }
 
