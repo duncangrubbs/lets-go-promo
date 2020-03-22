@@ -1,0 +1,13 @@
+{
+  "name": "lets-go",
+  "version": "1.0.0",
+  "description": "Frontend Promo Website",
+  "main": "app.js",
+  "repository": "https://github.com/duncangrubbs/lets-go.git",
+  "author": "Duncan Grubbs <duncan.grubbs@gmail.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
