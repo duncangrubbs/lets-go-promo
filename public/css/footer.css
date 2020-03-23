@@ -2,7 +2,7 @@
 #footer {
   display: flex;
   flex-direction: row;
-  height: 350px;
+  height: 300px;
   padding: 1.5% 0 0 12%;
   background-color: var(--dark-background);
   width: 100vw;

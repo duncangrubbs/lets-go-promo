@@ -42,15 +42,14 @@
   display: flex;
   flex-direction: column;
   width: 50%;
-  margin-left: 64px;
+  padding-left: 64px;
   max-height: 100vh;
 }
 
 .righthand-side {
   display: flex;
   width: 50%;
-  height: 100vh;
-  margin-right: 64px;
+  padding-right: 64px;
   max-height: 100vh;
 }
 
@@ -60,17 +59,29 @@
   justify-content: center;
 }
 
+.v-center {
+  height: 100%;
+  align-items: center;
+}
+
 /* ================ */
 /* WRAPPERS */
 /* ================ */
 #splash-content-wrapper {
   display: flex;
   flex-direction: row;
+  height: 85vh;
 }
 
 #about-content-wrapper {
   display: flex;
   flex-direction: row;
+  height: 85vh;
+  margin-bottom: 164px;
+}
+
+#background-elements {
+  /* display: none; */
 }
 
 /* ================ */
@@ -139,4 +150,5 @@
 
 #about-section__text {
   font-size: 1.2rem;
+  line-height: 1.8;
 }

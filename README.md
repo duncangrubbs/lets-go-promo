@@ -1,10 +1,10 @@
 # Let's Go
-> Promo Website for Let's Go
+> The promotional website for the Let's Go App
 
 ## 👩‍💻How To Run
 - `yarn start`
 
-## Built With
+## 🔨Built With
 - [HTML5](https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5)
 - [CSS3](https://developer.mozilla.org/en-US/docs/Archive/CSS3)
 - [Node.js](https://nodejs.org/en/)
