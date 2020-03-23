@@ -78,8 +78,9 @@
 /* ================ */
 #splash-svg {
   position: absolute;
-  right: -45vw;
-  top: -150px;
+  width: 52%;
+  right: 0;
+  top: -200px;
   z-index: -2;
 }
 
@@ -106,19 +107,21 @@
 /* ================ */
 /* IMAGES */
 /* ================ */
-#map-bg-1 {
-  width: 90rem;
-  opacity: .15;
+#map-bg-1,
+#map-bg-2 {
   position: absolute;
-  top: 10%;
-  left: -50px;
+  opacity: .1;
+}
+
+#map-bg-1 {
+  width: 80%;
+  top: 18%;
+  left: -10%;
   z-index: -10;
 }
 
 #map-bg-2 {
-  width: 90rem;
-  opacity: .15;
-  position: absolute;
+  width: 50%;
   top: 150%;
   left: -50px;
   width: 50%;

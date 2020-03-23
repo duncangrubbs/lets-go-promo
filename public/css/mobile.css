@@ -25,7 +25,7 @@ and (orientation: portrait) {
    color: var(--text-dark);
  }
 
- #splash-svg,
+ /* #splash-svg, */
  #walking-path,
  #map-bg-1, #map-bg-2 {
    display: none;
