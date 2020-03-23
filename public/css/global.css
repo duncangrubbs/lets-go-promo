@@ -2,16 +2,27 @@
 :root {
   --primary-color: #44CB92;
   --secondary-color: #93E8E8;
-  --text-color: #525252;
+  --dark-text: #525252;
+  --dark-background: #272727;
+  --light-background: #FFF;
+  --white-text: #FFF;
+  --off-white-text: #EAEAEA;
+  --standard-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+* {
+  overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+ a {
+  cursor: pointer;
 }
 
 span, h1, h2, h3, h4, p, div {
-  color: var(--text-color);
+  color: var(--dark-text);
 }
 
 html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif;
-  overflow-x: hidden;
 }

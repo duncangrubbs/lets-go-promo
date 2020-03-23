@@ -1,1 +1,33 @@
 /* MEDIA QUERIES FOR MOBILE */
+/* Portrait */
+@media only screen and (max-width: 600px)
+and (orientation: portrait) {
+ #splash-content-wrapper,
+ #about-content-wrapper {
+   width: 100vw;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+ }
+
+ #header-bar {
+  padding: 8px 32px;
+ }
+
+ .lefthand-side,
+ .righthand-side {
+   width: 100%;
+   margin: 0 12px;
+ }
+
+ .page-link {
+   color: var(--text-dark);
+ }
+
+ #splash-svg,
+ #walking-path,
+ #map-bg-1, #map-bg-2 {
+   display: none;
+ }
+}
