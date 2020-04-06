@@ -8,6 +8,14 @@
   --white-text: #FFF;
   --off-white-text: #EAEAEA;
   --standard-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  --level-zero: -1000;
+  --level-one: -5;
+  --level-two: -4;
+  --level-three: -3;
+  --level-four: -2;
+  --level-five: -1;
+  --level-six: 0;
+  --level-seven: 1;
 }
 
 * {

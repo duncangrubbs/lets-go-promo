@@ -2,6 +2,7 @@
 > The promotional website for the Let's Go App
 
 ## 👩‍💻How To Run
+- `yarn install`
 - `yarn start`
 
 ## 🔨Built With
