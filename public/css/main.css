@@ -56,6 +56,7 @@
 .h-center {
   display: flex;
   width: 100%;
+  overflow-y: hidden;
   justify-content: center;
 }
 
@@ -80,9 +81,9 @@
   margin-bottom: 200px;
 }
 
-#background-elements {
-  /* display: none; */
-}
+/* #background-elements {
+  display: none;
+} */
 
 /* ================ */
 /* IMAGES AND SPLASH CONTENT */
@@ -92,7 +93,7 @@
   width: 52%;
   right: 0;
   top: -200px;
-  z-index: -2;
+  z-index: -3;
 }
 
 #splash-text {
@@ -104,7 +105,109 @@
   position: absolute;
   left: 10%;
   top: 37%;
+  z-index: -3;
+}
+
+#location-popup-1 {
+  position: absolute;
   z-index: -2;
+  left: 22%;
+  top: 25%;
+}
+
+#location-popup-2 {
+  position: absolute;
+  z-index: -2;
+  left: 10%;
+  top: 37%;
+}
+
+#location-popup-3 {
+  position: absolute;
+  z-index: -2;
+  left: 10%;
+  top: 45%;
+}
+
+#location-popup-4 {
+  position: absolute;
+  z-index: -2;
+  left: 10%;
+  top: 50%;
+}
+
+#location-popup-5 {
+  position: absolute;
+  z-index: -2;
+  left: 10%;
+  top: 55%;
+}
+
+#location-popup-6 {
+  position: absolute;
+  z-index: -2;
+  left: 10%;
+  top: 60%;
+}
+
+#location-img-1 {
+  position: absolute;
+  z-index: 12;
+  left: 22%;
+  top: 25%;
+  border-radius: 100%;
+  width: 100px;
+  height: auto;
+}
+
+#location-img-2 {
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  top: 37%;
+  border-radius: 100%;
+  width: 100px;
+  height: auto;
+}
+
+#location-img-3 {
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  top: 45%;
+  border-radius: 100%;
+  width: 100px;
+  height: auto;
+}
+
+#location-img-4 {
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  top: 50%;
+  border-radius: 100%;
+  width: 100px;
+  height: auto;
+}
+
+#location-img-5 {
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  top: 55%;
+  border-radius: 100%;
+  width: 100px;
+  height: auto;
+}
+
+#location-img-6 {
+  position: absolute;
+  z-index: -1;
+  left: 10%;
+  top: 60%;
+  border-radius: 100%;
+  width: 100px;
+  height: auto;
 }
 
 #splash-screenshot {
