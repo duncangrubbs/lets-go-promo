@@ -2,11 +2,19 @@
 #footer {
   display: flex;
   flex-direction: row;
-  height: 300px;
+  height: 250px;
   padding: 1.5% 0 0 12%;
   background-color: var(--dark-background);
   width: 100vw;
   line-height: 1.5;
+}
+
+#copyright {
+  background-color: var(--dark-background);
+  width: 100vw;
+  height: 50px;
+  text-align: center;
+  color: var(--white-text);
 }
 
 .footer-column {
