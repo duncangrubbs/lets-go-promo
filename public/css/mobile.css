@@ -45,10 +45,8 @@ and (orientation: portrait) {
   }
 
   #splash-svg {
-    width: auto;
-    right: -1480px;
+    width: 90%;
     top: -300px;
-    transform: rotate(22deg);
   }
 
   #splash-video {
