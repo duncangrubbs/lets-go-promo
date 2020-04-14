@@ -83,9 +83,9 @@
   margin-bottom: 200px;
 }
 
-/* #background-elements {
-  display: none;
-} */
+#background-elements {
+  overflow-x: hidden;
+}
 
 /* ================ */
 /* IMAGES AND SPLASH CONTENT */
@@ -101,6 +101,11 @@
 #splash-text {
   font-size: 5rem;
   font-weight: 700;
+}
+
+#splash-video {
+  width: 600px;
+  height: 355px;
 }
 
 #walking-path {
@@ -158,6 +163,7 @@
 }
 
 #splash-screenshot {
+  display: none;
   width: 375px;
   height: 812px;
   margin: 16px;

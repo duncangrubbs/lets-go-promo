@@ -44,8 +44,16 @@ and (orientation: portrait) {
     height: auto;
   }
 
-  .page-link {
-    color: var(--text-dark);
+  #splash-svg {
+    width: auto;
+    right: -1480px;
+    top: -300px;
+    transform: rotate(22deg);
+  }
+
+  #splash-video {
+    width: 90%;
+    height: auto;
   }
 
   /* #splash-svg, */
@@ -56,8 +64,7 @@ and (orientation: portrait) {
   #location-popup-3,
   #location-popup-4,
   #location-popup-5,
-  #location-popup-6,
-  #splash-video {
+  #location-popup-6 {
     display: none;
   }
 }
