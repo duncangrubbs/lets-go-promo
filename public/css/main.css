@@ -14,6 +14,11 @@
   color: #FFF;
 }
 
+#header-logo {
+  height: 100%;
+  margin-right: 16px;
+}
+
 #website-title {
   flex-grow: 5;
   font-size: 2rem;
@@ -49,7 +54,6 @@
 .righthand-side {
   display: flex;
   width: 50%;
-  padding-right: 64px;
   max-height: 100vh;
   overflow-y: hidden;
 }
@@ -79,7 +83,7 @@
 #about-content-wrapper {
   display: flex;
   flex-direction: row;
-  height: 85vh;
+  height: 90vh; 
   margin-bottom: 200px;
 }
 
@@ -100,8 +104,8 @@
 }
 
 #splash-video {
-  width: 600px;
-  height: 355px;
+  width: 80%;
+  height: 50%;
 }
 
 #walking-path {
@@ -197,7 +201,7 @@
 /* TEXT */
 /* ================ */
 #about-section__heading {
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 700;
 }
 

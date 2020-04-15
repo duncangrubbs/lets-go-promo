@@ -23,9 +23,13 @@
   font-family: 'Roboto', sans-serif;
 }
 
- a {
+a {
   cursor: pointer;
   text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 span, h1, h2, h3, h4, p, div {

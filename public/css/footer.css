@@ -35,8 +35,3 @@
   font-size: 12pt;
   color: var(--off-white-text);
 }
-
-.footer-column__link:hover {
-  color: var(--white-text);
-  text-decoration: none;
-}

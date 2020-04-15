@@ -14,7 +14,7 @@ and (orientation: portrait) {
   }
 
   #header-bar {
-    padding: 8px 32px;
+    padding: 8px 12px 0 24px;
   }
 
   #splash-screenshot {
@@ -50,19 +50,25 @@ and (orientation: portrait) {
   }
 
   #splash-video {
+    width: 95%;
+    height: 225px;
+  }
+
+  #walking-path {
+    top: 35%;
     width: 90%;
-    height: auto;
+    opacity: .4;
   }
 
   /* #splash-svg, */
-  #walking-path,
   #map-bg-1, #map-bg-2,
   #location-popup-1,
   #location-popup-2,
   #location-popup-3,
   #location-popup-4,
   #location-popup-5,
-  #location-popup-6 {
+  #location-popup-6,
+  #website-title {
     display: none;
   }
 }
