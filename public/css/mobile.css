@@ -17,6 +17,10 @@ and (orientation: portrait) {
     padding: 8px 12px 0 24px;
   }
 
+  .page-link {
+    color: var(--dark-text);
+  }
+
   #splash-screenshot {
     margin: 0;
   }
@@ -49,18 +53,22 @@ and (orientation: portrait) {
     top: -300px;
   }
 
+  #video-wrapper {
+    width: 100%;
+    padding: 8px;
+  }
+
   #splash-video {
-    width: 95%;
+    width: 100%;
     height: 225px;
   }
 
   #walking-path {
     top: 35%;
     width: 90%;
-    opacity: .4;
+    opacity: .3;
   }
 
-  /* #splash-svg, */
   #map-bg-1, #map-bg-2,
   #location-popup-1,
   #location-popup-2,
