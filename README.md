@@ -1,4 +1,4 @@
-![](./public/res/logo.png)
+<p align="center"><img width=20% src="https://github.com/duncangrubbs/lets-go-promo/blob/master/public/res/logo.png"></p>
 
 # Let's Go
 > The promotional website for the Let's Go App
