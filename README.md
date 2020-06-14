@@ -1,3 +1,5 @@
+![](./public/res/logo.png)
+
 # Let's Go
 > The promotional website for the Let's Go App
 
